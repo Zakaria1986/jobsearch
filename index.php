@@ -1,5 +1,9 @@
-<?php include("dbcon/dbcon.php"); ?>
-<?php include("inc/select.php"); ?>
+<?php include_once("dbcon/dbcon.php"); ?>
+<?php
+ include_once("inc/select.php");
+ include_once("inc/delete.php"); 
+ ?>
+
 
 <!DOCTYPE HTML>
 <html>
@@ -18,6 +22,7 @@
     <?php 
     // as the names suggest, it fetches the database data stored in the database
     fetchResult(); 
+   
     ?>
  </div> 
  <!--Form section to enter the job details into the database -->

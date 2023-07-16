@@ -15,14 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 echo "<h1>Inserted successfully!</h1>";     
             }
             else {
+               
                 echo "Error: " . $insert . "<br>" . $link->error;
             }
         }
     }
 }
 $link->close();
-header("Location: ../index.php");
 
-// header('Location': 'index.php);
-    
-    ?>
+    header("Location: ../index.php");
+
+?>
