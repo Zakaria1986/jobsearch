@@ -43,4 +43,28 @@ function fetchResult(){
     // $link->free();
     $link->close();
 }
+
+
+
+function RecruitFetchResult(){
+    global $link;
+    $query = "SELECT * FROM recruiters";
+    $result = $link->query($query); 
+//   echo var_dump($result->num_rows);
+  if($result->num_rows > 0): 
+    while($rows = $result->fetch_assoc()): ?>
+      <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><?php echo $rows['name'];  ?></h5>
+        <p class="card-text"><?php echo $rows['comments']; ?>.</p>
+        <a target="_blank" href="<?php echo $rows['web_site']; ?>" class="btn btn-primary">visit</a>
+      </div>
+    </div>
+<?php 
+    endwhile;
+    endif;
+    // $link->free();
+    $link->close();
+}
 ?>

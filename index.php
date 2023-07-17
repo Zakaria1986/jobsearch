@@ -18,11 +18,11 @@
 <body>
 <div class="container">
     <div class="row shadow-lg p-3 mb-5 bg-body position-static"><h1 class="position-relative">Job Search history</h1></div>
-
+        
     <?php 
+    include('nav.php');
     // as the names suggest, it fetches the database data stored in the database
     fetchResult(); 
-   
     ?>
  </div> 
  <!--Form section to enter the job details into the database -->
