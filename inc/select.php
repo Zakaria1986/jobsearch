@@ -53,14 +53,16 @@ function RecruitFetchResult(){
 //   echo var_dump($result->num_rows);
   if($result->num_rows > 0): 
     while($rows = $result->fetch_assoc()): ?>
-      <div class="col-md-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"><?php echo $rows['name'];  ?></h5>
-        <p class="card-text"><?php echo $rows['comments']; ?>.</p>
-        <a target="_blank" href="<?php echo $rows['web_site']; ?>" class="btn btn-primary">visit</a>
-      </div>
-    </div>
+   
+     <div class="card text-center  " style="width: 18rem; margin: 1rem;" >
+                
+                    <div class="card-body ">
+                        
+                        <h5 class="card-title card-header" style="margin: 1rem;"><?php echo $rows['name'];  ?></h5>
+                        <p class="card-text"><?php echo $rows['comments']; ?>.</p>
+                        <a target="_blank" href="<?php echo $rows['web_site']; ?>" class="btn btn-primary">visit</a>
+                    </div>
+     </div>
 <?php 
     endwhile;
     endif;

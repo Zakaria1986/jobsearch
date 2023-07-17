@@ -28,7 +28,7 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="container">
-<div class="row shadow-lg p-3 mb-5 bg-body position-static"><h1 class="position-relative">Job Search Platfroms</h1></div>
+<div class="row shadow-lg p-3 mb-5 bg-body position-static"><h1 class="position-relative">Recruiting Platfroms</h1></div>
 <?php include('../nav.php') ?>
   <!-- Content here -->
 </div>
@@ -37,9 +37,9 @@ $(document).ready(function(){
 <div class="container">
   <!-- Content here -->
   
-            <div class="row">
+           <div class="row  alert-secondary">
                 <?php RecruitFetchResult() ?>
-            </div>
+                </div>
 </div>
 
 <br>
@@ -49,7 +49,7 @@ $(document).ready(function(){
   <div class="row">
         <h2>Enter recruiters details here: </h2>
     </div> 
-  <div class="row ">
+  <div class="row alert alert-light ">
         <form class='recruiters' action="../inc/recrinsert.php" method="POST">
             <div class="mb-3 col-6">
                 <label for="recruiter_name" class="form-label">Recruiter Name</label>
