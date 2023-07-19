@@ -60,7 +60,7 @@ function RecruitFetchResult(){
                         
                         <h5 class="card-title card-header" style="margin: 1rem;"><?php echo $rows['name'];  ?></h5>
                         <p class="card-text"><?php echo $rows['comments']; ?>.</p>
-                        <a target="_blank" href="<?php echo $rows['web_site']; ?>" class="btn btn-primary">visit</a>
+                        <a target="_blank" href="<?php echo $rows['web_site']; ?>" class="btn btn-primary">visit the job site</a>
                     </div>
      </div>
 <?php 

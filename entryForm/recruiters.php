@@ -34,11 +34,27 @@ $(document).ready(function(){
 </div>
     <br>
    
+
+<!-- <?php
+
+// $uri = $_SERVER['REQUEST_URI']; 
+// $trimedPath = trim($uri, '/'); 
+// echo $trimedPath; 
+
+// $tokens = explode("/", $trimedPath); 
+// echo '<br>token', $tokens[2]; 
+
+// die(); 
+?> -->
+
 <div class="container">
   <!-- Content here -->
   
            <div class="row  alert-secondary">
-                <?php RecruitFetchResult() ?>
+                <?php
+                RecruitFetchResult();
+                ?>
+
                 </div>
 </div>
 
