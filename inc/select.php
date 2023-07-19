@@ -8,16 +8,20 @@ function fetchResult(){
     while($rows = $result->fetch_assoc()): ?>
     
     <div class='row shadow-lg p-3 mb-5 bg-body '>
-        <div class="row">
-                <div class="col">
+        <div class="row text text-center">
+                <div class="col align-middle">
                     <h4>Job title:</h4>  <a target="_blank" href="<?php echo $rows['url']; ?>"><h6><?php echo $rows['Job_title'];  ?></h6></a>
                 </div>
                 <br><br>
                 <div class="col">
-                    <h4> Applied on:</h4>  <?php echo $rows['created']; ?>
+                    <h4 class='align-middle'> Applied on:</h4>  <?php echo $rows['created']; ?>
+                </div>
+
+                <div class="col">
+                    <h4> Status:</h4> <span class='fs-5 text-success'><?php echo $rows['status']; ?></span> 
                 </div>
                 <!-- This is a danger Zone -->
-                        <div class="col-md-3" class="alert alert-danger d-flex align-items-center" role="alert">
+                        <div class="col-md-3 text-right" class="alert alert-danger d-flex " role="alert">
                             <form action="inc/delete.php" method="GET">
                                 <input type="hidden" name="delete_by_id" value='<?php echo $rows['id']; ?>'>
                                 <input class="alert alert-danger d-flex align-items-right" role="alert"  type="submit" name='delete' value='Delete'>  
@@ -36,15 +40,12 @@ function fetchResult(){
         </div>
     </div>
    
-
 <?php 
     endwhile;
     endif;
     // $link->free();
-    $link->close();
+    // $link->close();
 }
-
-
 
 function RecruitFetchResult(){
     global $link;
@@ -66,7 +67,33 @@ function RecruitFetchResult(){
 <?php 
     endwhile;
     endif;
-    // $link->free();
-    $link->close();
+    
 }
+
+?>
+
+
+<?php
+
+function taxonomyResult(){
+            global $link;
+            $txquery = "SELECT * FROM taxonomy";
+            $txresult = $link->query($txquery); 
+        //   echo var_dump($result->num_rows);
+        if($txresult->num_rows > 0): 
+            while($txrows = $txresult->fetch_assoc()): ?>
+                 <option  value="<?php echo $txrows['taxonomy'] ?>"><?php echo $txrows['taxonomy'] ?>
+        <?php 
+            endwhile;
+            endif;
+            // $link->free();
+            $link->close();
+}
+
+
+
+
+
+
+
 ?>

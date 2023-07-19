@@ -1,6 +1,4 @@
 
-
-
 <div class="container">
   <!-- Content here -->
   <div class="row">
@@ -11,6 +9,14 @@
             <div class="mb-3 col-6">
                 <label for="exampleInputEmail1" class="form-label">Job title</label>
                 <input type="text" name='job_title' class="form-control" id="exampleInputEmail1" aria-describedby="enter email address">
+                <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3 col-6">
+                <label for="taxChoice" class="form-label">Taxonomy</label>
+                <input list="status" name="status" class="form-control" id="taxChoice" aria-describedby="Satus application in">
+                <datalist id="status">
+                        <?php  taxonomyResult(); ?>
+                 </datalist>
                 <div id="emailHelp" class="form-text"></div>
             </div>
             <div class="mb-6 col-6">

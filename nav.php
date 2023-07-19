@@ -1,9 +1,6 @@
 <?php
+                
                 $uri = $_SERVER['REQUEST_URI']; 
-                $trimedPath = trim($uri, '/'); 
-                // $tokens = explode('/', $trimedPath);
-                // //  $url = $tokens[sizeof($tokens)-1] === 'recruiters.php' ? '#' : 'entryForm/recruiters.php#';
-                // // // die();
                 $basename = basename($uri); 
                 $index;
                 $recruits;

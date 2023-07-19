@@ -25,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
 }
 $link->close();
-
 header("Location: ../entryForm/recruiters.php");
 
 ?>
