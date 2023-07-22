@@ -19,19 +19,11 @@
                     }
 ?>
 
-<div class="container">
-    <div class="row row shadow-lg p-3 mb-5 bg-body position-static">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded"> 
      <h2> 
-         <!-- <a class="navbar-brand" href="../index.php#">Home</a>  -->
-        
          <a class="navbar-brand" href="<?php echo  $index;  ?>">Home</a>
          <a class="navbar-brand" href="<?php echo  $recruits;  ?>">Job platforms</a>
      </h2>
-    </div>
   </nav>
-  </div>
-</div>
 
 

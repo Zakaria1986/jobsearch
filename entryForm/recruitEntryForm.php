@@ -2,7 +2,7 @@
 
 <!-- This goes into recruite.php -->
 
-<div class="container">
+<div class="container shadow-lg p-3 mb-5 bg-body rounded"">
   <!-- Content here -->
   <div class="row">
         <h2>Enter recruiters details here: </h2>

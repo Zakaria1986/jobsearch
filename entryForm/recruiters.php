@@ -11,10 +11,10 @@
   <!-- Content here -->
 </div>
     <br>
-<div class="container">
+<div class="container bg-body">
   <!-- Content here -->
   
-           <div class="row  alert-secondary">
+           <div class="row bg-success p-2 text-dark bg-opacity-5">
                 <?php
                 RecruitFetchResult();
                 ?>
