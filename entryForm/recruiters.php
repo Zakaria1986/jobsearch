@@ -14,11 +14,7 @@
 <div class="container bg-body">
   <!-- Content here -->
   
-<<<<<<< HEAD
            <div class="row row-background p-2 text-dark bg-opacity-5">
-=======
-           <div class="row bg-success p-2 text-dark bg-opacity-5">
->>>>>>> cededd9f051fbe9de8ec93303c226d10748adac4
                 <?php
                 RecruitFetchResult();
                 ?>
