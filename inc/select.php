@@ -26,6 +26,7 @@ if($result->num_rows > 0):
                 <li class="list-group-item">  <strong class=" card-title">Note:</strong> <?php echo $rows['description']; ?></li>
         </ul>
                
+<<<<<<< HEAD
             <div class="card-body row justify-content-evenly">
                                 <div class="col-4">
                                     <form class='align-items-end ' action="inc/delete.php" method="GET">
@@ -40,6 +41,14 @@ if($result->num_rows > 0):
                                     </form>
                                 </div>           
                     </div>      
+=======
+            <div class="card-body">
+                    <form class='align-items-end ' action="inc/delete.php" method="GET">
+                        <input type="hidden" name="delete_by_id" value='<?php echo $rows['id']; ?>'>
+                        <input class="alert-danger d-flex align-items-right bg-success p-2" style="--bs-bg-opacity: .10;" role="alert"  type="submit" name='delete' value='Delete'>  
+                    </form>
+            </div>      
+>>>>>>> cededd9f051fbe9de8ec93303c226d10748adac4
           
           
         </div>
@@ -69,7 +78,11 @@ echo '</div>';
                         <div class="card-body ">
                             <h5 class="card-title card-header" style="margin: 1rem;"><?php echo $rows['name'];  ?></h5>
                             <p class="card-text"><?php echo $rows['comments']; ?>.</p>
+<<<<<<< HEAD
                             <a target="_blank" href="<?php echo $rows['web_site']; ?>" class="btn bg-clr p-2 text-white" style="--bs-bg-opacity: .10;">Visit job site</a>
+=======
+                            <a target="_blank" href="<?php echo $rows['web_site']; ?>" class="btn bg-success p-2 text-white" style="--bs-bg-opacity: .10;">visit the job site</a>
+>>>>>>> cededd9f051fbe9de8ec93303c226d10748adac4
                         </div>
         </div>
     <?php 
