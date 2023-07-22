@@ -1,4 +1,4 @@
-# jobsearch
+# Jobsearch Organiser App 
 
 This is an application to keep my job search records organised. 
 

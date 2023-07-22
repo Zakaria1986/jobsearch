@@ -1,0 +1,15 @@
+.row-background {
+    background-color: #931fc582 !important;
+}
+
+.bg-clr,
+.card-body a,
+.row input.btn-primary {
+    background-color: #802bc1a6;
+}
+
+nav.bg-clr a,
+.card-body a,
+.row input.btn-primary {
+    color: #fff !important;
+}

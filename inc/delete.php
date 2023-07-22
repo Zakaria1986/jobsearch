@@ -1,12 +1,10 @@
 <?php
 
-$delete_by_id; 
+// $delete_by_id; 
 
 if(isset($_GET['delete'])){
     $delete_by_id = $_GET["delete_by_id"]; 
     deletedRecord($delete_by_id);
-
-
 }
 
 function deletedRecord($id){

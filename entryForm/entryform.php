@@ -1,17 +1,18 @@
 
-<div class="container">
+<div class="mt-10 shadow-lg p-3 mb-5 bg-body rounded">
   <!-- Content here -->
-  <div class="row">
-    
+  <div class="row justify-content-md-center">
+    <h2>Enter job details here:</h2>
     </div> 
-  <div class="row ">
+
+  <div class="row justify-content-md-center">
         <form action="inc/insertinto.php" method="POST">
             <div class="mb-3 col-6">
                 <label for="exampleInputEmail1" class="form-label">Job title</label>
                 <input type="text" name='job_title' class="form-control" id="exampleInputEmail1" aria-describedby="enter email address">
                 <div id="emailHelp" class="form-text"></div>
             </div>
-            <div class="mb-3 col-6">
+            <div class="mb-3 col-3">
                 <label for="taxChoice" class="form-label">Taxonomy</label>
                 <input list="status" name="status" class="form-control" id="taxChoice" aria-describedby="Satus application in">
                 <datalist id="status">
