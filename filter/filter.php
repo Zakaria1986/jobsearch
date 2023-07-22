@@ -113,9 +113,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"): ?>
 else:
     $sql =  "SELECT * FROM cover_letters";
     $result = $link->query( $sql);
-    while ($rows = mysqli_fetch_assoc($result)) :
-?>
 
+   $data = array(); 
+     
+    while ($rows = mysqli_fetch_assoc($result)) :
+
+        $data[] = $rows; 
+?>
                     <div class="col-md-4 ">
                             <div class="card shadow p-3 mb-5 bg-body rounded" style=" margin: 0.3rem 0">
 
@@ -146,19 +150,12 @@ else:
                                                         </form>
                                                     </div>           
                                         </div>      
-                            
-                            
                             </div>
                         </div>
-
-
-
-
-
  <?php
  endwhile;
-endif
- ?>
+endif;
+?>
  </div>
 </div>
 </body>

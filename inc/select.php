@@ -11,7 +11,7 @@ echo ' <div class="row">';
 if($result->num_rows > 0): 
     while($rows = $result->fetch_assoc()): ?>
     <div class="col-md-4 ">
-        <div class="card shadow p-3 mb-5 bg-body rounded" style=" margin: 0.3rem 0">
+        <div class="card shadow p-3 mb-5 bg-body rounded" style=" margin: 0.3rem">
 
             <div class="card-body text-center">
                 <strong class="fs-6 card-title ">Job title:  </strong>
@@ -65,9 +65,9 @@ echo '</div>';
     if($result->num_rows > 0): 
         while($rows = $result->fetch_assoc()): ?>
     
-        <div class="card text-center shadow-lg p-3 mb-5 bg-body rounded"  style="width: 18rem; margin: 1rem;" >
+        <div class="card text-center col-sm-6 shadow-lg p-3 mb-4 rounded"  style=" width: 18rem; margin: 0.3rem;" >
                         <div class="card-body ">
-                            <h5 class="card-title card-header" style="margin: 1rem;"><?php echo $rows['name'];  ?></h5>
+                            <h5 class="card-title card-header" style="marginxs: 1rem;"><?php echo $rows['name'];  ?></h5>
                             <p class="card-text"><?php echo $rows['comments']; ?>.</p>
                             <a target="_blank" href="<?php echo $rows['web_site']; ?>" class="btn bg-clr p-2 text-white" style="--bs-bg-opacity: .10;">Visit job site</a>
                         </div>
