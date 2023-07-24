@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>App</title>
+    <title>Job search app</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script charset="utf-8" src="js/app.js"></script>
     <link rel="stylesheet" href="<?= (basename($_SERVER['REQUEST_URI'])==='index.php')? 'css/style.css' : '../css/style.css' ?>" />

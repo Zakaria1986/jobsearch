@@ -23,6 +23,8 @@ if (!$link) {
     die("Connection failed: " . mysqli_connect_error());
 }
 // Preperated statement query
+
+
 $stmt = mysqli_prepare($link, "SELECT * FROM cover_letters WHERE status = ?"); 
 
 // Status query; 

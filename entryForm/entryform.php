@@ -14,10 +14,9 @@
             </div>
             <div class="mb-3 col-3">
                 <label for="taxChoice" class="form-label">Taxonomy</label>
-                <input list="status" name="status" class="form-control" id="taxChoice" aria-describedby="Satus application in">
-                <datalist id="status">
+                <select name="status" id="status" list="status taxChoice" name="status" class="form-control"  aria-describedby="Satus application in">
                         <?php  taxonomyResult(); ?>
-                 </datalist>
+                </select>
                 <div id="emailHelp" class="form-text"></div>
             </div>
             <div class="mb-6 col-6">

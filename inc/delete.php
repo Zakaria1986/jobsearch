@@ -10,8 +10,10 @@ if(isset($_GET['delete'])){
 function deletedRecord($id){
     include('../dbcon/dbcon.php'); 
     
-    $deleted = "DELETE FROM cover_letters WHERE id = '{$id}'"; 
-    if($link->query($deleted)){
+    $deleted = mysqli_prepare($link, "DELETE FROM cover_letters WHERE id = ?"); 
+    mysqli_stmt_bind_param($deleted, 's', $id); 
+
+    if(mysqli_stmt_execute($deleted)){
         echo "Deleted record ". $id;
     }else{
         echo 'Oops! Something went wrong';
