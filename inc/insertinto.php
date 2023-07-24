@@ -1,6 +1,5 @@
 <?php include("../dbcon/dbcon.php"); 
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if(isset($_POST['submit'])){
 
@@ -10,9 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $status = $_POST['status'];
             $descpt = $_POST['description'];
 
-            $insert = "INSERT INTO cover_letters (`status`,`Job_title`, `url`, `description`) VALUES('{$status}','{$jobTitle}','{$url}','{$descpt}')";  
-
-            if($link->query($insert)){
+            $insert = $link->prepare("INSERT INTO cover_letters (`status`,`Job_title`, `url`, `description`) VALUES(?,?,?,?)"); 
+            $insert->bind_param('ssss', $status, $jobTitle, $url,$descpt); 
+            if($insert->execute()){
                 echo "<h1>Inserted successfully!</h1>";     
             }
             else {
@@ -21,10 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
     }
-
     $link->close();
     header("Location: ../index.php");
 }
-
-    
+  
     ?>
