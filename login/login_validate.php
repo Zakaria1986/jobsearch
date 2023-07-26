@@ -8,9 +8,8 @@ include_once("../dbcon/dbcon.php");
 // Handle login form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get user input from the login form
-    $input_username = $_POST["username"];
-    $input_password = $_POST["password"];
-
+    $input_username = mysqli_real_escape_string($link,filter_var( $_POST["username"], FILTER_SANITIZE_EMAIL));        
+    $input_password =  mysqli_real_escape_string($link, $_POST["password"]);
 
     // Check connection
     if ($link->connect_error) {
@@ -18,11 +17,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Query to check if the user exists in the database
-    $sql = "SELECT `id`, `first_name`, `last_name` FROM `users` WHERE `email` = '$input_username' AND `password` = '$input_password'";
-    $result = $link->query($sql);
+    $sql = "SELECT `id`, `first_name`, `last_name` FROM `users` WHERE `email` = ?  AND `password` =  ?";
 
-      echo  var_dump($result);
-      
+    $stmt = $link->prepare($sql); 
+    $stmt->bind_param("ss", $input_username, $input_password);
+    $stmt->execute(); 
+    $result = $stmt->get_result(); 
+    echo var_dump($result);
+           
       if($result->num_rows > 0){
             $row = $result->fetch_assoc(); 
 
