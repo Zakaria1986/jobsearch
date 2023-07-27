@@ -1,23 +1,21 @@
-<?php require_once "login_validate.php"; ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login Page</title>
-</head>
-<body>
+<?php 
+ require_once "login_validate.php"; ?>
+
     <?php  
     echo 'This is the user ID :', $_SESSION['user_id'], " and the User name ", $_SESSION['user_name'];
     ?>
-    <h2>Login</h2>
-    <?php if (isset($error_message)) { echo "<p style='color: red;'>$error_message</p>"; } ?>
-    <form method="post" action="login_validate.php">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
-
-        <button type="submit">Login</button>
-    </form>
-</body>
-</html>
+<div class="myform bg-dark">
+    <h1 class="text-center">Login Form</h1>
+        <form method="post" action="login/login_validate.php">
+        <div class="mb-3 mt-4">
+            <label for="username">Username:</label>
+            <input type="email" class="form-control"  id="username" name="username" required><br>
+        </div>
+        <div class="mb-3">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+         </div>
+            <button type="submit" class="btn btn-light mt-3">Login</button>
+        </form>
+</div>

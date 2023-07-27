@@ -36,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
            $_SESSION['user_name']  =  $first_name. ' '.$first_last;
            echo  'this is session name ',$_SESSION['user_name'];
             
-    
         exit;
       }else{
         // User not found, show error message

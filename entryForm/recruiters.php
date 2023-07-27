@@ -16,7 +16,10 @@
   
            <div class="row row-background p-2 text-dark bg-opacity-5">
                 <?php
+                 
                 RecruitFetchResult();
+             
+
                 ?>
 
                 </div>
@@ -25,8 +28,12 @@
 <br>
 
 <?php 
-
+if(!empty($_SESSION['user_id']) && !empty($_SESSION['user_name'])){
 require_once('recruitEntryForm.php');
+}
+else{
+  echo '<h5>Please, login to add new jobs.</h5>';
+}
 require_once('../pagesections/footer.php')
 
 ?>

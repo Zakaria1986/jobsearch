@@ -34,7 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"): ?>
                                         <li class="list-group-item">  <strong class="card-title">Applied on: </strong>  <?php echo $rows['created']; ?></li>
                                         <li class="list-group-item">  <strong class=" card-title">Note:</strong> <?php echo $rows['description']; ?></li>
                                 </ul>
-                                    
+                                <?php 
+                                
+                                if(!empty($_SESSION['user_id']) && !empty($_SESSION['user_name'])): ?>                        
                                     <div class="card-body row justify-content-evenly">
                                                         <div class="col-4">
                                                             <form class='align-items-end ' action="inc/delete.php" method="GET">
@@ -48,9 +50,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"): ?>
                                                                 <input class="alert-success d-flex align-items-right bg-success p-2" style="--bs-bg-opacity: .10;" role="alert"  type="submit" name="update" value="Edit">  
                                                             </form>
                                                         </div>           
-                                            </div>      
+                                        </div>      
                                 
-                                
+                                <?php endif ?>
                                 </div>
                             </div>
 
@@ -79,7 +81,7 @@ else:
                 <li class="list-group-item">  <strong class="card-title">Applied on: </strong>  <?php echo $rows['created']; ?></li>
                 <li class="list-group-item">  <strong class=" card-title">Note:</strong> <?php echo $rows['description']; ?></li>
         </ul>
-            
+      <?php  if(!empty($_SESSION['user_id']) && !empty($_SESSION['user_name'])): ?>    
             <div class="card-body editSec row justify-content-evenly" >
                                 <div class="col-4">
                                     <form class='align-items-end ' action="inc/delete.php" method="GET">
@@ -93,7 +95,8 @@ else:
                                         <input class="alert-success d-flex align-items-right bg-clr p-2" style="--bs-bg-opacity: .10;" role="alert"  type="submit" name="update" value="Edit">  
                                     </form>
                                 </div>           
-                    </div>      
+                    </div>   
+                    <?php endif ?>   
         </div>
     </div>
 <?php
